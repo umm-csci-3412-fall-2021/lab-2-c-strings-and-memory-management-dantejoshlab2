@@ -2,6 +2,7 @@
 
 #include "palindrome.h"
 
+/* Added statements to is_palindrome and not_palindrome that stores the result of palindrome in the variable answer, and then we added a free statement after the asserts to free the memory that answer points to. */
 void is_palindrome(char const *str) {
   char *answer;
   answer = palindrome(str);
