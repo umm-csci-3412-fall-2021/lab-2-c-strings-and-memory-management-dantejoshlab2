@@ -2,6 +2,7 @@
 
 #include "disemvowel.h"
 
+/* In each of the tests, we stored the result of disemvowel in a variable called result, and then freed the memory that result points to. */
 TEST(Disemvowel, HandleEmptyString) {
  char *result;
  result = disemvowel((char*) "");

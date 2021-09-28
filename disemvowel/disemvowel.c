@@ -2,7 +2,7 @@
 #include <string.h>
 #include "disemvowel.h"
 
-
+/* This function checks to see if a character is a vowel and returns a 1 if it is or 0 otherwise */
 int checkVowel(char ch){
 	if (ch =='a' || ch =='e' || ch =='i' || ch == 'o' || ch == 'u')
 		return 1;
@@ -12,6 +12,7 @@ int checkVowel(char ch){
 	 return 0;
 }
 
+/* This function takes in a string, loops through every character and calls checkVowel on that character and removes it if it is. */ 
 char *disemvowel(char *str) {
   char *result;
   int len, i,counter;
