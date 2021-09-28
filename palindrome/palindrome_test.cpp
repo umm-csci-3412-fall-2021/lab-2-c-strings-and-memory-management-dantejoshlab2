@@ -2,12 +2,19 @@
 
 #include "palindrome.h"
 
+/* Added statements to is_palindrome and not_palindrome that stores the result of palindrome in the variable answer, and then we added a free statement after the asserts to free the memory that answer points to. */
 void is_palindrome(char const *str) {
-  ASSERT_STREQ(palindrome(str), "Yes");
+  char *answer;
+  answer = palindrome(str);
+  ASSERT_STREQ(answer, "Yes");
+  free(answer);
 }
 
 void not_palindrome(char const *str) {
-  ASSERT_STREQ(palindrome(str), "No");
+  char *answer;
+  answer = palindrome(str);
+  ASSERT_STREQ(answer, "No");
+  free(answer);
 }
 
 TEST(Palindrome, HandlesEmptyString) {
